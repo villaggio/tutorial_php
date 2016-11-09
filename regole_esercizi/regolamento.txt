@@ -1,0 +1,59 @@
+http://www.html.it/pag/59167/costruttori-multipli-in-php
+http://www.html.it/pag/52369/indicatori-di-visibilita-public-protected-e-private
+
+<?php    
+    class Person {
+        public $name;
+        private $age;
+             
+        public function __construct($name, $age)
+        {
+            $this->name = $name;
+            $this->age = $age;
+        }               
+         
+        private function get_age(){
+            return $this->age;               
+        }
+             
+        public function print_age(){
+            return $this->get_age();
+        }
+        }
+ 
+$customer1 = new Person("Giuseppe Rossi","34"); 
+echo "Nome: " . $customer1->name."<br>"; 
+echo "Anni: " . $customer1->print_age()."<br>";    
+echo "Anni: " . $customer1->age; // questo provoca un errore         
+?>
+
+Copiare questo codice modificando il costruttore come private.
+Due nuovi metodi static ci permetteranno di ottenere una istanza di Person:
+Funzione: generatePersonByName($name) a partire dal nome
+Funzione: generatePersonByAge($age) a partire dall' età
+Un ulteriore funzione ci permette di convertire l'oggetto in una string leggibile:
+toString() che restituirà "nome: $name età: $age"
+Eseguire le due funzioni statiche in coda al codice facendo echo ogni volta del relativo toString()
+
+_______
+
+http://www.html.it/pag/18349/ereditariet-estendere-le-classi/
+http://www.html.it/pag/53073/overriding-e-keyword-final-in-php/
+http://www.html.it/pag/60965/i-traits-in-php/
+
+1.
+Riprendiamo l'esercizio precedente gestendo __costruct come public attendendosi sempre sia $age che $name. In fondo aggiungere echo toString di un nuovo oggetto costruito con questo metodo public
+2.
+Generiamo una classe Employee che estende Person con una property in più ($profile).
+Il costruttore di Employee richiamerà quello del padre richiendo anche il parametro $profile.
+3.
+In questa classe dovremo aggiungere un metodo statico factory che ci permetta di valorizzare una nuova propery publica: public $profile. Il nuovo metodo si chiamerà generateEmployeeByProfile($profile)
+
+
+
+
+
+
+
+
+
