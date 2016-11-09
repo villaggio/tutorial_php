@@ -28,9 +28,24 @@
         }
         
         public function toString(){
-            return "Nome: ".$this->name."<br>Eta: ".$this->age."<br>";
+            return "Nome: ".$this->name."<br>Eta: ".$this->age."<br><br>";
         }
+    }
+    
+    // definizione della sottoclasse Employees
+    class Employees extends Person {
+        public $profile;
+         
+        public function __construct($name, $age, $profile) // costruttore della sottoclasse
+        {           
+            parent::__construct($name, $age);
+            $this->profile=$profile; // inizializzazione della nuova proprietà della sottoclasse         
         }
+        
+        public function toString(){
+            return parent::toString()."Profilo: ".$this->profile."<br>";
+        }
+    }   
  
 $customer1 = new Person("Giuseppe Rossi","34");
 echo $customer1->toString();
@@ -38,6 +53,8 @@ $customer2 = Person::generatePersonByName("Giuseppe Rossi");
 echo $customer2->toString();
 $customer3 = Person::generatePersonByAge(44);
 echo $customer3->toString();
+$customer4 = new Employees("Mario",33,"AD");
+echo $customer4->toString();
 
 
 ?>
