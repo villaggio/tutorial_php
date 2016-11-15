@@ -18,9 +18,15 @@ A partire dagli esempio della pagina di lezione sulle interfacce procedere come 
 -------------------------------------------------
 - Creare una classe astratta di nome Student dove definire:
 proprietà: private nomeCorso / private livelloApprendimento
-metodi: protected get/set nomeCorso/livelloApprendimento
+metodi: protected/public get/set nomeCorso/livelloApprendimento
 metodo astratto: toFullString() dovremo implementare in Employee
 la versione toString estesa con i campi privati nomeCorso
  e livelloApprendimento
 
 Ora Employees extenderà Student insieme a implementare Person
+
+3) Generare in Person un metodo che tramite typeHinting prenda una Person come parametro e la valorizzi come property $bestFriend
+Come sappiamo tutti l implementazione di un metodo dichiarto in una interfaccia ricate sulla classe che la implementa.
+-----------------------
+Cloniamo il migliore amico come nuovo Employee utilizzando il magic methods:
+si può fare? vediamo insieme
