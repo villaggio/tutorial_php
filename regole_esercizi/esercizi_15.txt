@@ -8,3 +8,19 @@ metodo public setCompany per valorizzarla
 metodo public toString chemostri il tostring originale + il valore di company
 
 Nella parte finale del file aggiungere un setCompany e mostrarlo con il tostring del traits
+
+2) http://www.html.it/pag/18356/le-interfacce-2/
+A partire dagli esempio della pagina di lezione sulle interfacce procedere come segue:
+
+- Ridefinire Person come interfaccia dichiarando
+ solamente i suoi metodi
+- Implementare i metodi di Person in Employees
+-------------------------------------------------
+- Creare una classe astratta di nome Student dove definire:
+proprietà: private nomeCorso / private livelloApprendimento
+metodi: protected get/set nomeCorso/livelloApprendimento
+metodo astratto: toFullString() dovremo implementare in Employee
+la versione toString estesa con i campi privati nomeCorso
+ e livelloApprendimento
+
+Ora Employees extenderà Student insieme a implementare Person
