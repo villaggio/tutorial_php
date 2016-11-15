@@ -6,6 +6,7 @@ require_once "student.php";
         public $name;
         private $age;
         public $profile;
+        private $bestFriend;
          
         public function __construct($name, $age, $profile) // costruttore della sottoclasse
         {           
@@ -16,6 +17,14 @@ require_once "student.php";
         
         public function print_age() {
             return $this->age;
+        }
+        
+        function setBestFriend(Person $bestFriend){
+            $this->bestFriend = $bestFriend;
+        }
+        
+        function __clone(){
+            $this->profile = "";
         }
         
         public function toString(){

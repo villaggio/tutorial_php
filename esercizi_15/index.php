@@ -8,4 +8,8 @@ $customer1->setLivelloApprendimento(10);
 $customer1->setNomeCorso("FrontEnd Dev");
 echo $customer1->toFullString();
 echo "<br>";
-?>
+$customer2 = clone $customer1;
+$customer2->name = "Filippo Bianchi";
+$customer2->setBestFriend($customer1);
+//
+var_dump($customer2);

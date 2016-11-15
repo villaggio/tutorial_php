@@ -28,5 +28,4 @@ Ora Employees extenderà Student insieme a implementare Person
 3) Generare in Person un metodo che tramite typeHinting prenda una Person come parametro e la valorizzi come property $bestFriend
 Come sappiamo tutti l implementazione di un metodo dichiarto in una interfaccia ricate sulla classe che la implementa.
 -----------------------
-Cloniamo il migliore amico come nuovo Employee utilizzando il magic methods:
-si può fare? vediamo insieme
+QUando cloniamo un Employee utilizzando il magic methods per cancellare il campo profile
