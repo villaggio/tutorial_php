@@ -1,0 +1,10 @@
+Esercizio:
+1) A partire dal progetto tutorialPHP su villaggio modificare index.php in modo da disporre di un traits con nome Job per estendere Employees
+vedi: http://www.html.it/pag/60965/i-traits-in-php/
+Questo traits contterrà i seguienti metodi e proprietà:
+proprietà: private $company
+metodo: public getCompany
+metodo public setCompany per valorizzarla
+metodo public toString chemostri il tostring originale + il valore di company
+
+Nella parte finale del file aggiungere un setCompany e mostrarlo con il tostring del traits
